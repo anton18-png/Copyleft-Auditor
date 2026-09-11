@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Copyleft Auditor Pro — антивирус для кода. Юридический рентген Open Source: лицензии, обфускация, угрозы Loki.">
+    <title>Copyleft Auditor Pro — Антивирус для кода</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Сетка и сканлайн-эффекты фона -->
+    <div class="bg-grid"></div>
+    <div class="scanlines"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- ═══════════ НАВИГАЦИЯ ═══════════ -->
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="#top" class="brand">
+                <span class="brand-icon">⬡</span>
+                <span class="brand-name">COPYLEFT<span class="accent">AUDITOR</span></span>
+                <span class="brand-pro">PRO</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Возможности</a>
+                <a href="#how">Как работает</a>
+                <a href="#risks">Риски</a>
+                <a href="#reports">Отчеты</a>
+                <a href="#tech">Технологии</a>
+                <a href="#faq">FAQ</a>
+                <a href="#download" class="nav-cta">Скачать</a>
+            </nav>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ═══════════ HERO ═══════════ -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">АГЕНТ ДЛЯ OPEN SOURCE • v3.0</div>
+                <h1 class="hero-title">
+                    АНТИВИРУС<br>
+                    <span class="gradient-text" id="typing">ДЛЯ КОДА</span><span class="cursor">█</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Юридический рентген вашего репозитория: лицензии, обфускация, угрозы Loki.
+                    Узнайте, <span class="accent">украл ли ваш разработчик</span> этот код —
+                    и не спрятана ли в нем <span class="accent">мина для вашего бизнеса</span>.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://github.com/anton18-png/Copyleft-Auditor/releases/download/beta/CopyleftAuditorPro.zip" class="btn btn-primary">⬇ Скачать (Beta)</a>
+                    <a href="#how" class="btn btn-ghost">▸ Посмотреть как работает</a>
+                    <a href="#faq" class="btn btn-ghost">?</a>
+                </div>
+
+                <!-- Терминал -->
+                <div class="terminal" aria-hidden="true">
+                    <div class="terminal-bar">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">copyleft_audit — scanning</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="term-line"><span class="t-prompt">$</span> copyleft_auditor scan ./repo</div>
+                        <div class="term-line t-dim">[10%] Проверка лицензий...</div>
+                        <div class="term-line t-dim">[25%] Анализ 148 файлов...</div>
+                        <div class="term-line t-warn">⚠ AGPL-3.0 найден — СИЛЬНЫЙ КОПИЛЕФТ!</div>
+                        <div class="term-line t-warn">⚠ eval() в src/page.js (строки 1, 234)</div>
+                        <div class="term-line t-ok">[95%] Генерация отчета...</div>
+                        <div class="term-line t-ok">✔ ГОТОВО. Риск: <span class="t-red">ВЫСОКИЙ</span></div>
+                        <div class="term-line t-prompt">$ <span class="t-cursor">█</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-n" data-count="50">50</span><span class="stat-l">+ ЛИЦЕНЗИЙ</span></div>
+                    <div class="stat"><span class="stat-n" data-count="5">5</span><span class="stat-l">ТИПОВ ОБФУСКАЦИИ</span></div>
+                    <div class="stat"><span class="stat-n" data-count="2">2</span><span class="stat-l">ВКЛАДКИ UI</span></div>
+                    <div class="stat"><span class="stat-n" data-count="7">7</span><span class="stat-l">ФОРМАТОВ АРХИВОВ</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ ПРОБЛЕМА ═══════════ -->
+        <section class="problem">
+            <div class="container">
+                <h2 class="section-title">ВЫ НЕ ВИДИТЕ <span class="gradient-text">ПОДОПЛЕКУ</span></h2>
+                <p class="section-sub">Каждый заимствованный репозиторий — это черный ящик. Внутри может быть всё что угодно.</p>
+                <div class="problem-grid">
+                    <div class="problem-card danger">
+                        <div class="pc-icon">⚖️</div>
+                        <h3>Юридические мины</h3>
+                        <p>Код без лицензии нельзя использовать в коммерции. Копилефт-лицензии (GPL, AGPL) заражают ваш продукт и обязывают открыть исходники.</p>
+                    </div>
+                    <div class="problem-card danger">
+                        <div class="pc-icon">🕵️</div>
+                        <h3>Скрытая обфускация</h3>
+                        <p>Переименованные переменные, сотни eval(), закодированные строки — признак того, что код что-то скрывает.</p>
+                    </div>
+                    <div class="problem-card danger">
+                        <div class="pc-icon">💣</div>
+                        <h3>Закладки и угрозы</h3>
+                        <p>Криптомайнеры, веб-шеллы, трояны — IoC-сигнатуры Loki распознают вредоносные артефакты прямо в вашем репозитории.</p>
+                    </div>
+                </div>
+                <div class="solution-banner">
+                    <p><strong>Copyleft Auditor Pro</strong> делает рентген для кода — вы наконец видите его насквозь.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ ВОЗМОЖНОСТИ ═══════════ -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">БОЕВОЙ АРСЕНАЛ <span class="gradient-text">ВОЗМОЖНОСТЕЙ</span></h2>
+                <p class="section-sub">Всё, что нужно, чтобы превратить код из черного ящика в прозрачный отчет.</p>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="f-tag">ЮРИДИКА</span>
+                        <h3>50+ детектируемых лицензий</h3>
+                        <p>GPL-2/3, AGPL-3.0, LGPL-2/2.1/3, MIT, Apache-2.0, BSD-2/3-Clause, MPL, EPL, CDDL, ISC, Unlicense, CC0-1.0, WTFPL и десятки других.</p>
+                        <ul>
+                            <li>Классификация: сильный копилефт / слабый / пермиссивный / public domain</li>
+                            <li>Полный текст лицензии в отчете</li>
+                            <li>Поиск лицензий внутри README.md</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="f-tag">БЕЗОПАСНОСТЬ</span>
+                        <h3>Диагностика обфускации</h3>
+                        <p>Пять типов подозрительного кода и опасные паттерны — каждый с номером строки.</p>
+                        <ul>
+                            <li>Переименование переменных (<code>_0x...</code>)</li>
+                            <li>Мертвый код и глубокие вложенные условия</li>
+                            <li>Base64/hex-строки, <code>eval()</code>, <code>exec()</code>, <code>Function()</code></li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="f-tag">УГРОЗЫ</span>
+                        <h3>Сканер Loki (IoC)</h3>
+                        <p>Интеграция с сигнатурным сканером Loki от Neo23x0.</p>
+                        <ul>
+                            <li>Автообновление сигнатур с GitHub</li>
+                            <li>Поиск криптомайнеров, веб-шеллов, троянов</li>
+                            <li>Каждое срабатывание — файл, правило и уровень</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="f-tag">АРХИВЫ</span>
+                        <h3>Глубокое сканирование архивов</h3>
+                        <p>Распаковка через 7-Zip и анализ содержимого.</p>
+                        <ul>
+                            <li>zip, 7z, rar, tar, gz, bz2, xz</li>
+                            <li>Сканируются даже файлы внутри архивов</li>
+                            <li>Временные папки автоматически очищаются</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="f-tag">ОТЧЕТЫ</span>
+                        <h3>Мгновенный экспорт HTML</h3>
+                        <p>Полноценный отчет, который открывается сразу в браузере.</p>
+                        <ul>
+                            <li>Автосохранение в папку <code>reports/</code></li>
+                            <li>Имя файла: репозиторий + дата и время</li>
+                            <li>Вкладка «Отчеты»: открытие, удаление, навигация</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="f-tag">ИНТЕРФЕЙС</span>
+                        <h3>Синий киберпанк + Safe Harbor</h3>
+                        <p>Темный интерфейс, который не утомляет, и понятная навигация.</p>
+                        <ul>
+                            <li>Две вкладки: «Сканирование» и «Отчеты»</li>
+                            <li>Дерево файлов с подсветкой рисков</li>
+                            <li>Сканирование локальной папки или GitHub URL</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ КАК РАБОТАЕТ ═══════════ -->
+        <section class="how" id="how">
+            <div class="container">
+                <h2 class="section-title">КАК ЭТО <span class="gradient-text">РАБОТАЕТ</span></h2>
+                <p class="section-sub">Четыре шага от входа до юридического вердикта.</p>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-num">01</span>
+                        <h3>Источник</h3>
+                        <p>Укажите локальную папку репозитория или вставьте GitHub URL — приложение само клонирует его (<code>git clone --depth 1</code>).</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">02</span>
+                        <h3>Анализ</h3>
+                        <p>Модуль сканирует файлы кода (Python, JS, TS, Go, Rust, Java, C++, C#, Ruby, PHP, Kotlin, Swift), ищет лицензии, обфускацию и опасные паттерны.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">03</span>
+                        <h3>Угрозы</h3>
+                        <p>Сканер Loki обновляет сигнатуры и проверяет репозиторий на IoC: криптомайнеры, веб-шеллы, трояны.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">04</span>
+                        <h3>Вердикт</h3>
+                        <p>Итоговый риск: 🟢 НИЗКИЙ / 🟡 СРЕДНИЙ / 🔴 ВЫСОКИЙ. Отчет с кодом, лицензиями и рекомендациями сохраняется в HTML.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ РИСКИ ═══════════ -->
+        <section class="risks" id="risks">
+            <div class="container">
+                <h2 class="section-title">ТРИ УРОВНЯ <span class="gradient-text">ТРЕВОГИ</span></h2>
+                <p class="section-sub">Моментальная оценка всего репозитория в одном индикаторе.</p>
+                <div class="risk-grid">
+                    <div class="risk-card green">
+                        <div class="risk-light"></div>
+                        <h3>НИЗКИЙ РИСК</h3>
+                        <p>Чистый репозиторий: лицензии на месте, авторские права указаны, подозрительных паттернов нет.</p>
+                        <ul>
+                            <li>Лицензия присутствует и действительна</li>
+                            <li>Нет опасных вызовов (<code>eval</code>, <code>exec</code>)</li>
+                            <li>Рекомендуется к использованию</li>
+                        </ul>
+                    </div>
+                    <div class="risk-card yellow">
+                        <div class="risk-light"></div>
+                        <h3>СРЕДНИЙ РИСК</h3>
+                        <p>Требует внимания: слабый копилефт, неизвестная лицензия или умеренные признаки обфускации.</p>
+                        <ul>
+                            <li>Слабая лицензия копилефта (LGPL, MPL)</li>
+                            <li>Неизвестная / непонятная лицензия</li>
+                            <li>Много желтых файлов со средним скором</li>
+                        </ul>
+                    </div>
+                    <div class="risk-card red">
+                        <div class="risk-light"></div>
+                        <h3>ВЫСОКИЙ РИСК</h3>
+                        <p>Сигнал тревоги: сильный копилефт, отсутствие лицензии, обфускация или срабатывания Loki.</p>
+                        <ul>
+                            <li>AGPL / GPL — ваш код обязан стать открытым</li>
+                            <li>Использование <code>eval()</code>/<code>exec()</code></li>
+                            <li>IoC-сигнатуры высокого уровня</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ ОТЧЕТЫ ═══════════ -->
+        <section class="reports" id="reports">
+            <div class="container">
+                <h2 class="section-title">ОТЧЕТ, КОТОРЫЙ <span class="gradient-text">ОТКРЫВАЕТСЯ СРАЗУ</span></h2>
+                <div class="reports-grid">
+                    <div class="report-feature">
+                        <h3>📄 Что внутри отчета</h3>
+                        <ul>
+                            <li>Общая оценка риска и краткая сводка</li>
+                            <li>Юридический индекс здоровья (0–100, грейд A–D)</li>
+                            <li>Анализ всех лицензий + полный текст</li>
+                            <li>Проблемные файлы с фрагментами кода (№ строк)</li>
+                            <li>Результаты Loki и критические проблемы</li>
+                            <li>Список рекомендаций</li>
+                        </ul>
+                    </div>
+                    <div class="report-feature">
+                        <h3>🗂 Вкладка «Отчеты»</h3>
+                        <ul>
+                            <li>Все сохраненные отчеты в папке <code>reports/</code></li>
+                            <li>Сортировка: новые сверху, с датой и размером</li>
+                            <li>Двойной клик — открыть в браузере</li>
+                            <li>Удаление устаревших одним кликом</li>
+                            <li>Кнопка «Открыть папку» — навигация в проводнике</li>
+                            <li>Отчеты хранятся рядом с программой</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ ТЕХНОЛОГИИ ═══════════ -->
+        <section class="tech" id="tech">
+            <div class="container">
+                <h2 class="section-title">СДЕЛАНО НА <span class="gradient-text">ПРОВЕРЕННОМ СТЕКЕ</span></h2>
+                <div class="tech-grid">
+                    <div class="tech-card"><span class="t-ico">🐍</span><h4>Python 3.10+</h4><p>Ядро анализа, парсинг AST</p></div>
+                    <div class="tech-card"><span class="t-ico">🖥</span><h4>CustomTkinter</h4><p>Темный киберпанк-интерфейс</p></div>
+                    <div class="tech-card"><span class="t-ico">🔎</span><h4>Loki (Neo23x0)</h4><p>IoC-сигнатуры угроз</p></div>
+                    <div class="tech-card"><span class="t-ico">📦</span><h4>7-Zip</h4><p>Распаковка архивов</p></div>
+                    <div class="tech-card"><span class="t-ico">📝</span><h4>Markdown</h4><p>Генерация отчета → HTML</p></div>
+                    <div class="tech-card"><span class="t-ico">🧪</span><h4>PyInstaller</h4><p>Сборка в standalone EXE</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ FAQ ═══════════ -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2 class="section-title">ЧАСТЫЕ <span class="gradient-text">ВОПРОСЫ</span></h2>
+                <div class="faq-list">
+
+                    <details class="faq-item">
+                        <summary>Что такое «копилефт» и почему это опасно?</summary>
+                        <p>Копилефт-лицензия (GPL, AGPL, LGPL) требует: если вы используете этот код, ваш производный продукт тоже должен быть открыт. Сильный копилефт «заражает» весь проект — вы обязаны раскрыть свои исходники. Auditor подсветит это до того, как вы подпишете заказ.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Можно ли использовать код без лицензии?</summary>
+                        <p>Формально — нет. Код без лицензии остается под защитой копирайта по умолчанию, и использовать его в коммерческом продукте значит нарушать права автора. Auditor помечает такой репозиторий красным и рекомендует отказаться или связаться с автором.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Что делать при обнаружении обфускации?</summary>
+                        <p>Откройте фрагмент кода в отчете (с номерами строк), изучите паттерны: переименование переменных, eval(), кодированные строки. Если обфускация массовая — это красный флаг: код может скрывать майнер или шпионский модуль. Изучите файлы вручную или откажитесь от репозитория.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Как работает интеграция с Loki?</summary>
+                        <p>Приложение загружает актуальные сигнатуры Loki с GitHub (релизы Neo23x0), затем сканирует файлы репозитория против базы IoC: известные хеши, паттерны веб-шеллов, криптомайнеров и троянов. Результат — таблица с файлом, правилом и уровнем угрозы.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Отчет заменит заключение юриста?</summary>
+                        <p>Нет. Auditor — инструмент предварительной разведки, который экономит часы ручного анализа и подсвечивает риски. Финальное юридическое заключение составляет профессиональный юрист. Мы так и пишем в отчете и в отказе от ответственности.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Какие языки программирования анализируются?</summary>
+                        <p>Python, JavaScript, TypeScript, Go, Rust, Java, C++, C, C#, Ruby, PHP, Kotlin, Swift. Для языков вне списка работает общий эвристический анализ строк и паттернов.</p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ СКАЧАТЬ ═══════════ -->
+        <section class="download" id="download">
+            <div class="container">
+                <div class="download-box">
+                    <h2 class="section-title">ГОТОВЫ СДЕЛАТЬ <span class="gradient-text">РЕНТГЕН КОДА</span>?</h2>
+                    <p class="section-sub">Скачайте готовую сборку и запустите одним кликом — или соберите сами из исходников.</p>
+                    <div class="terminal mini">
+                        <div class="term-line"><span class="t-prompt">$</span> git clone https://github.com/anton18-png/Copyleft-Auditor.git</div>
+                        <div class="term-line"><span class="t-prompt">$</span> pip install -r requirements.txt</div>
+                        <div class="term-line"><span class="t-prompt">$</span> python -m copyleft_auditor</div>
+                        <div class="term-line t-ok">✔ Система инициализирована. Добро пожаловать в матрицу.</div>
+                    </div>
+                    <div class="download-actions">
+                        <a href="https://github.com/anton18-png/Copyleft-Auditor/releases/download/beta/CopyleftAuditorPro.zip" class="btn btn-primary">⬇ Скачать Beta (.zip)</a>
+                        <a href="https://github.com/anton18-png/Copyleft-Auditor" class="btn btn-ghost">◈ Исходный код на GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════ ФУТЕР ═══════════ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-name">COPYLEFT<span class="accent">AUDITOR</span> <span class="brand-pro">PRO</span></span>
+                <p>Антивирус для кода · AGPL-3.0 · v3.0</p>
+            </div>
+            <div class="footer-tagline">«Мы — страховка от дурака в Open Source»</div>
+            <div class="footer-copy">© 2026 Anton-18 PNG. Лицензия GNU AGPL v3. <a href="../LICENSE">Просмотр лицензии</a>.</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
